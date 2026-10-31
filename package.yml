@@ -1,0 +1,18 @@
+package: community.lazycat.app.openspeedtest
+version: 2.0.8
+name: OpenSpeedTest
+description: Browser-based upload, download and latency testing for the path to your self-hosted server.
+min_os_version: "1.5.0"
+homepage: https://github.com/openspeedtest/Speed-Test
+author: openspeedtest
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: OpenSpeedTest
+    description: 浏览器到自托管服务的上传、下载及延迟测试，支持局域网链路测速。
+  en:
+    name: OpenSpeedTest
+    description: Browser-based upload, download and latency testing for the path to your self-hosted server.

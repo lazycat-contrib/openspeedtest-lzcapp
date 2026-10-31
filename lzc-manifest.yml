@@ -1,0 +1,17 @@
+application:
+  subdomain: openspeedtest
+  multi_instance: false
+  upstreams:
+    - location: /
+      backend: http://openspeedtest:3000/
+services:
+  openspeedtest:
+    # upstream: docker.io/openspeedtest/latest:v2.0.8
+    image: docker.1ms.run/openspeedtest/latest:v2.0.8
+usage: |
+  OpenSpeedTest 提供浏览器到本服务的下载、上传与延迟测试；单容器，无数据库及原生账号体系。
+  保留懒猫入口身份认证，无匿名公共路径，不开放额外端口。HTTPS 由懒猫入口提供，容器使用 HTTP 3000。
+  结果反映当前浏览器至应用入口的整条访问链路，可能经过网关、反向代理或远程中继，不等同于服务器网卡直连性能或互联网出口带宽。
+  代理请求大小、超时、浏览器性能和无线网络可能影响上传及测速结果；不包含 MySpeed 一类定时互联网测速或长期测速历史功能。
+  无需要持久化的数据库或配置，不接文件选择器拦截，不添加 smoke 作业。
+  未做懒猫实机测速、上传请求限制、多客户端或移动端运行验证。
